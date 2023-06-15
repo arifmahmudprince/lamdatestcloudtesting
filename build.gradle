@@ -16,6 +16,6 @@ dependencies {
 
 test {
     useTestNG() {
-        suites "./src/test/resources/suites/testrunner.xml"
+        suites "./src/test/resources/suites/testmanager.xml"
     }
 }
