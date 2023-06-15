@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'CloudTestLamda'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.6.0'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
+}
+
+test {
+    useTestNG() {
+        suites "./src/test/resources/suites/testrunner.xml"
+    }
+}
