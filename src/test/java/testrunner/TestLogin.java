@@ -56,11 +56,12 @@ public class TestLogin {
     public void doFailedLogin() throws InterruptedException {
         loginPage = new LoginPage(driver);
         driver.get("https://opensource-demo.orangehrmlive.com");
+        Thread.sleep(5000);
         loginPage.doLogin("Admin", "wrongPassword");
         String expectedText = "Invalid credentials";
-        String actualText = driver.findElement(By.className("oxd-alert-content-text")).getText();
+        Thread.sleep(5000);
+        String actualText = driver.findElement(By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")).getText();
         Assert.assertTrue(actualText.contains(expectedText));
-        Thread.sleep(2000);
     }
 
     @AfterClass

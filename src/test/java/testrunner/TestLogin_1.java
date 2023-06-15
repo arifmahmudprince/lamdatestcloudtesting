@@ -52,14 +52,15 @@ public class TestLogin_1 {
     }
 
     @Test
-    public void doLogin() throws InterruptedException {
+    public void doFailedLogin() throws InterruptedException {
         loginPage = new LoginPage(driver);
         driver.get("https://opensource-demo.orangehrmlive.com");
-        loginPage.doLogin("Admin", "admin123");
         Thread.sleep(5000);
-        String actualUrl = driver.getCurrentUrl();
-        String expectedUrl = "dashboard";
-        Assert.assertTrue(actualUrl.contains(expectedUrl));
+        loginPage.doLogin("Admin", "admin123");
+        String expectedText = "Invalid credentials";
+        Thread.sleep(5000);
+        String actualText = driver.findElement(By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")).getText();
+        Assert.assertTrue(actualText.contains(expectedText));
     }
 
     @AfterClass

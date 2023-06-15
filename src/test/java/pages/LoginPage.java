@@ -6,11 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    @FindBy(name = "username")
+    @FindBy(xpath = "//input[@name='username']")
     WebElement usernameInput;
-    @FindBy(name = "password")
+    @FindBy(xpath = "//input[@name='password']")
     WebElement passwordInput;
-    @FindBy(css = "[type=submit]")
+    @FindBy(xpath = "//button[@type='submit']")
     WebElement submitBtn;
 
     public LoginPage(WebDriver driver) {
