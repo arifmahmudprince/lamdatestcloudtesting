@@ -27,6 +27,7 @@ Where can I see automation test result?
 -Notably, you can set up your own desired capabilities and sample code will be generated in LamdaTest
 
 Prior knowledge-
+
 -You need to have minimal prior knowledge in web/app automation like what is selenium, TestNG, and any programming language
 
 How to run this project?
