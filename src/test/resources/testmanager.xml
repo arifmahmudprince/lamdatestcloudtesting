@@ -1,8 +1,30 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite thread-count="1" verbose="1" name="Assignment 2 Inscale">
-    <test name="TestCase for PhpTravels">
+<suite thread-count="1" verbose="1" name="Cloud test in Lamda" parallel="tests">
+    <test name="Test in windows 10 and chrome version 113">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="113.0"/>
+        <parameter name="platform" value="WIN10"/>
         <classes>
             <class name="testrunner.TestLogin"/>
         </classes>
     </test>
+
+    <test name="Test in windows 10 and chrome version 114">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="114.0"/>
+        <parameter name="platform" value="WIN10"/>
+        <classes>
+            <class name="testrunner.TestLogin_1"/>
+        </classes>
+    </test>
+
+    <test name="Test in windows 11 and chrome version 114">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="114.0"/>
+        <parameter name="platform" value="Windows 11"/>
+        <classes>
+            <class name="testrunner.TestLogin_1"/>
+        </classes>
+    </test>
+
 </suite>
