@@ -2,12 +2,14 @@
 This is a simple web login form automation with selenium to run in LamdaTest for experimenting cloud testing.
 
 What does this project bring?
+
 -Simple web login form automation
 -Integration for cloud testing in LamdaTest
 -Parallel testing in different OS and different browser version
 -Test management through TestNG
 
 How do I continue?
+
 -Create your account in LamdaTest, use the free version
 -Get access info in LamdaTest, username, acesskey
 -Prepare your automation project. I would say to try with a small one at first
@@ -15,6 +17,7 @@ How do I continue?
 -Prepare TestNG for your test management
 
 Where can I see automation test result?
+
 -Login to your LamdaTest account
 -Find the segment Automation/Build
 -In this segment you can see details of your test automation result/report
